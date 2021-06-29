@@ -2,7 +2,6 @@ from utils import *
 
 
 def room_1():
-    items = ['key_1', 'key_2', 'key_3', 'key_4', 'key_5', 'key_6']
     print('You walk into a room with 6 keys. Only two of the keys will open doors and you have two doors.')
     print('You only have 3 chances.')
 
@@ -59,4 +58,38 @@ def room_1():
 
 
 def room_2():
-    print('Hi')
+    print('You walk into a room full of cooking supplies and two unlocked doors.')
+    print('Do you pick up the cooking supplies? (y or n)')
+    user_input = take_input().lower()
+    if user_input == 'y':
+        supplies = 1
+    elif user_input == 'n':
+        supplies = 0
+    else:
+        the_end('Not an option. The end.')
+        return
+    print('Do you go through the left or right door? (l or r)')
+    user_input = take_input().lower()
+    if user_input == 'l':
+        print("You've found the kitchen.")
+        if supplies == 1:
+            print('You cook you a peanut butter jelly sandwich and get to live forever.')
+            print('As you stick the peanut butter jelly sandwich in the over you find a key.')
+            print('There are two doors do you go through the left or right? (l or r)')
+            user_input = take_input().lower()
+            if user_input == 'l':
+                the_end('You found an exit congrats!')
+                return
+            elif user_input == 'r':
+                the_end('You found a room full of water. It rushes into the kitchen and drowns you.')
+            else:
+                the_end('Not an option. The end.')
+                return
+        elif supplies == 0:
+            the_end("You didn't bring cooking supplies so you die.")
+            return
+    elif user_input == 'r':
+        the_end('You found an exit with a diamond! Congrats!')
+    else:
+        the_end('Not an option. The end.')
+        return

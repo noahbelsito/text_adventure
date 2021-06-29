@@ -1,10 +1,3 @@
-# Room 2 is a room full of cooking supplies and two unlocked doors
-#  First door goes to a kitchen and the Second door goes to a Diamond and an exit
-#    learn valuable cooking skills
-#    find a key hidden in the oven if you end up cooking
-#    Two other doors
-#       One door leads to an exit
-#       One door leads to a room full of water that floors the kitchen and drowns you
 from rooms import *
 
 
